@@ -20,7 +20,6 @@ def multi_layer_lstm(input_x, n_hidden, n_layers):
     # 多层RNN的实现 例如cells=[cell1,cell2]，则表示一共有两层
     mcell = tf.contrib.rnn.MultiRNNCell(cells=stacked_rnn)
 
-    # 静态rnn函数传入的是一个张量list  每一个元素都是一个(batch_size,n_dim)大小的张量
     hiddens, states = tf.nn.dynamic_rnn(mcell, input_x, time_major=False, dtype=tf.float32)
 
     return hiddens, states
