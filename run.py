@@ -26,7 +26,7 @@ def run_lstm():
                                                activation_fn=tf.nn.softmax)
     print(output.shape)
     # 代价函数 J =-(Σy.logaL)/n    .表示逐元素乘
-    cost = tf.reduce_mean(-tf.reduce_sum(input_y * tf.log(output[-1]), axis=1))
+    cost = tf.reduce_mean(-tf.reduce_sum(input_y * tf.log(output), axis=1))
 
     train = tf.train.AdamOptimizer(LR).minimize(cost)
 
