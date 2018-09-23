@@ -3,7 +3,10 @@
 A demo for processing sequence with lstm
 ```
 
-# how to run
+# how to run  
+
+python version: 3.6  
+
 ```text
 python run.py
 ```
